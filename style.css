@@ -26,19 +26,22 @@ body {
   margin: 11.5rem 12.6rem 0 5.2rem;
 }
 .main-container .secondary-container .top-sector .title-sentence-white {
-  margin: 0 0 1rem 0;
+  margin: 0;
+  margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 800;
   color: #ffffff;
 }
 .main-container .secondary-container .top-sector .title-sentence-green {
-  margin: 0 0 1rem 0;
+  margin: 0;
+  margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 800;
   color: #4adf86;
 }
 .main-container .secondary-container .top-sector .phrase {
-  margin: 0 0 1rem 0;
+  margin: 0;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 400;
   color: #d5d4d8;
