@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&display=swap");
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   font-family: "Karla", sans-serif;
   font-size: 10px;
 }
@@ -26,21 +30,18 @@ body {
   margin: 11.5rem 12.6rem 0 5.2rem;
 }
 .main-container .secondary-container .top-sector .title-sentence-white {
-  margin: 0;
   margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 800;
   color: #ffffff;
 }
 .main-container .secondary-container .top-sector .title-sentence-green {
-  margin: 0;
   margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 800;
   color: #4adf86;
 }
 .main-container .secondary-container .top-sector .phrase {
-  margin: 0;
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 400;

@@ -5,10 +5,14 @@
 @import "./variables/colors";
 @import "./variables/mixins";
 
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   font-family: "Karla", sans-serif;
   font-size: 10px;
 }
@@ -30,7 +34,6 @@ body {
       margin: 11.5rem 12.6rem 0 5.2rem;
 
       .title-sentence-white {
-        margin: 0;
         margin-bottom: 1rem;
         font-size: 4rem;
         font-weight: 800;
@@ -38,7 +41,6 @@ body {
       }
 
       .title-sentence-green {
-        margin: 0;
         margin-bottom: 1rem;
         font-size: 4rem;
         font-weight: 800;
@@ -46,7 +48,6 @@ body {
       }
 
       .phrase {
-        margin: 0;
         margin-bottom: 1rem;
         font-size: 2rem;
         font-weight: 400;
