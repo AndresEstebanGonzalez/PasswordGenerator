@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 10px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+}
+.main-container .secondary-container {
+  width: 55rem;
+  height: 55rem;
+  background-color: #1f2937;
+  border-radius: 2rem;
+}
+.main-container .secondary-container .top-sector {
+  margin: 11.5rem 12.6rem 0 5.2rem;
+}
+.main-container .secondary-container .top-sector .title-sentence-white {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.main-container .secondary-container .top-sector .title-sentence-green {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #4adf86;
+}
+.main-container .secondary-container .top-sector .phrase {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #d5d4d8;
+}
+.main-container .secondary-container .middle-sector {
+  margin: 5.1rem 5.2rem 0 5.2rem;
+}
+.main-container .secondary-container .middle-sector .generate-passwords {
+  width: 19.1rem;
+  height: 4.2rem;
+  padding: 0.9rem 1.7rem 0.9rem 1.5rem;
+  border: none;
+  border-radius: 0.6rem;
+  color: #ffffff;
+  background-color: #10b981;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.main-container .secondary-container .middle-sector .line {
+  width: 44.6rem;
+  margin-top: 3.5rem;
+  border-bottom: 0.1rem solid #2f3e53;
+}
+.main-container .secondary-container .bottom-sector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 44.6rem;
+  height: 3.9rem;
+  margin: 3.5rem 5.2rem 11.5rem 5.2rem;
+}
+.main-container .secondary-container .bottom-sector .output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 21.1rem;
+  height: 3.9rem;
+  background-color: #273549;
+  border-radius: 0.6rem;
+  color: #55f991;
+  font-size: 1.6rem;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
