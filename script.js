@@ -98,15 +98,15 @@ const characters = [
 
 // Random value for characters
 function randomValue() {
-  let randomNumber = Math.floor(Math.random() * characters.length);
-  let randomCharacters = characters[randomNumber];
+  const randomNumber = Math.floor(Math.random() * characters.length);
+  const randomCharacters = characters[randomNumber];
   return randomCharacters;
 }
 
 // Password generator
 function passwordOutput() {
-  let lengthOfPassword = 10;
-  for (let i = 0; i < lengthOfPassword; i++) {
+  const passwordLength = 10;
+  for (let i = 0; i < passwordLength; i++) {
     // Left output password
     outputLeft.textContent += randomValue();
     // Right output password
