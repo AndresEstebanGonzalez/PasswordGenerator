@@ -2,6 +2,10 @@ const generatePasswordsBtn = document.getElementById("generatePasswords");
 const outputLeft = document.getElementById("outputLeft");
 const outputRight = document.getElementById("outputRight");
 
+//Copy Buttons
+const copyBtnLeft = document.getElementById("copyBtnLeft");
+const copyBtnRight = document.getElementById("copyBtnRight");
+
 const characters = [
   "A",
   "B",
@@ -118,11 +122,34 @@ function passwordOutput() {
 generatePasswordsBtn.addEventListener("click", () => {
   outputLeft.textContent = "";
   outputRight.textContent = "";
+
+  copyBtnLeft.textContent = "Copy";
+  copyBtnRight.textContent = "Copy";
   passwordOutput();
 });
 
+//Copy function
+function copyToLeftButton() {
+  const leftPassword = outputLeft.textContent;
+  navigator.clipboard.writeText(leftPassword);
+}
+
+function copyToRightButton() {
+  const rightPassword = outputRight.textContent;
+  navigator.clipboard.writeText(rightPassword);
+}
+
+copyBtnLeft.addEventListener("click", () => {
+  copyToLeftButton();
+  copyBtnLeft.textContent = "Copied!";
+});
+
+copyBtnRight.addEventListener("click", () => {
+  copyToRightButton();
+  copyBtnRight.textContent = "Copied!";
+});
+
 //TO-DO:
-// COPY BUTTON
 // LENGTH RANGE SLIDER
 // SPECIAL CHARACTER TOGGLE SWITCH
 // NUMBER TOGGLE SWITCH
