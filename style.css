@@ -61,6 +61,30 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
 }
+.main-container .secondary-container .middle-sector .top-middle-sector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.main-container .secondary-container .middle-sector .top-middle-sector .checkbox-container {
+  display: flex;
+  justify-content: default;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.main-container .secondary-container .middle-sector .top-middle-sector .checkbox-container input {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 1rem;
+  color: #1c1c1c;
+}
 .main-container .secondary-container .middle-sector .line {
   width: 44.6rem;
   margin-top: 3.5rem;

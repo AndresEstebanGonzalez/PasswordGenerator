@@ -6,6 +6,12 @@ const outputRight = document.getElementById("outputRight");
 const copyBtnLeft = document.getElementById("copyBtnLeft");
 const copyBtnRight = document.getElementById("copyBtnRight");
 
+//Special characters
+let removeSpecialCheckBox = document.getElementById("removeSpecialChar");
+removeSpecialCheckBox.checked === false;
+let removeNumberCheckBox = document.getElementById("removeNumberChar");
+removeNumberCheckBox === false;
+
 const characters = [
   "A",
   "B",
@@ -100,16 +106,72 @@ const characters = [
   "/",
 ];
 
+//Array with NO Special Characters
+const specialCharacter = characters.slice(62, 91);
+const noSpecialCharacter = characters.filter(
+  (item) => !specialCharacter.includes(item)
+);
+
+//Array with NO Special Characters LENGTH
+const noSpecialLength = noSpecialCharacter.length;
+
+//Array with NO Numbers
+const numberCharacter = characters.slice(52, 62);
+const noNumberCharacter = characters.filter(
+  (item) => !numberCharacter.includes(item)
+);
+
+//Array with NO Numbers LENGTH
+const noNumberLength = noNumberCharacter.length;
+
+//Array with NO Special Characters or Numbers
+const noSpecialNumberCharacter = characters.slice(0, 51);
+
+//Array with NO Special Characters or Numbers LENGTH
+const noSpecialNumberLength = noSpecialNumberCharacter.length;
+
 // Random value for characters
 function randomValue() {
-  const randomNumber = Math.floor(Math.random() * characters.length);
-  const randomCharacters = characters[randomNumber];
+  let arrayLength;
+  if (
+    removeSpecialCheckBox.checked === true &&
+    removeNumberCheckBox.checked === true
+  ) {
+    arrayLength = noSpecialNumberLength;
+  } else if (removeSpecialCheckBox.checked === true) {
+    arrayLength = noSpecialLength;
+  } else if (removeNumberCheckBox.checked === true) {
+    arrayLength = noNumberLength;
+  } else if (
+    removeSpecialCheckBox.checked === false &&
+    removeNumberCheckBox.checked === false
+  ) {
+    arrayLength = characters.length;
+  }
+
+  //Random number depending on Array.length chosen
+  const randomNumber = Math.floor(Math.random() * arrayLength);
+
+  if (removeSpecialCheckBox.checked === true) {
+    randomCharacters = noSpecialCharacter[randomNumber];
+  } else if (removeNumberCheckBox.checked === true) {
+    randomCharacters = noNumberCharacter[randomNumber];
+  } else if (
+    removeSpecialCheckBox.checked === true &&
+    removeNumberCheckBox.checked === true
+  ) {
+    randomCharacters = noSpecialNumberCharacter[randomNumber];
+  } else {
+    randomCharacters = characters[randomNumber];
+  }
+
   return randomCharacters;
 }
 
 // Password generator
 function passwordOutput() {
   const passwordLength = 10;
+
   for (let i = 0; i < passwordLength; i++) {
     // Left output password
     outputLeft.textContent += randomValue();
@@ -148,8 +210,3 @@ copyBtnRight.addEventListener("click", () => {
   copyToRightButton();
   copyBtnRight.textContent = "Copied!";
 });
-
-//TO-DO:
-// LENGTH RANGE SLIDER
-// SPECIAL CHARACTER TOGGLE SWITCH
-// NUMBER TOGGLE SWITCH
