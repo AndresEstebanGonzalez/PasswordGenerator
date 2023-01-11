@@ -210,6 +210,3 @@ copyBtnRight.addEventListener("click", () => {
   copyToRightButton();
   copyBtnRight.textContent = "Copied!";
 });
-
-//TO-DO:
-// LENGTH RANGE SLIDER
