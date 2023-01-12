@@ -12,6 +12,10 @@ removeSpecialCheckBox.checked === false;
 let removeNumberCheckBox = document.getElementById("removeNumberChar");
 removeNumberCheckBox === false;
 
+//Password length
+const passwordLengthRange = document.getElementById("passwordLength");
+const passwordLengthDisplay = document.getElementById("inputDisplay");
+
 const characters = [
   "A",
   "B",
@@ -168,9 +172,15 @@ function randomValue() {
   return randomCharacters;
 }
 
+//Password length display
+passwordLengthRange.addEventListener("input", () => {
+  passwordLengthDisplay.textContent = passwordLengthRange.value;
+});
+
 // Password generator
 function passwordOutput() {
-  const passwordLength = 10;
+  const passworldLengthValue = passwordLengthRange.value;
+  const passwordLength = passworldLengthValue;
 
   for (let i = 0; i < passwordLength; i++) {
     // Left output password
