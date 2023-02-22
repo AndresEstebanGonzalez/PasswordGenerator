@@ -13,8 +13,8 @@ let removeNumberCheckBox = document.getElementById("removeNumberChar");
 removeNumberCheckBox === false;
 
 //Password length
-const passwordLengthRange = document.getElementById("passwordLength");
-const passwordLengthDisplay = document.getElementById("inputDisplay");
+const passwordLengthRange = document.getElementById("passwordLengthRange");
+const passwordLengthDisplay = document.getElementById("passwordLengthDisplay");
 
 const characters = [
   "A",
