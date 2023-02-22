@@ -102,11 +102,9 @@ body {
           align-self: flex-start;
           margin: 1rem 0rem 1rem 5rem;
         }
-        input[type="range"] {
+        .line {
           width: 34.6rem;
           border-bottom: 0.1rem solid $fine-blue;
-
-          background-color: $green1;
         }
       }
     }
